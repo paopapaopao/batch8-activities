@@ -1,0 +1,13 @@
+body {
+	border-width: 10px;
+	border-color: black;
+	border-style: double;
+
+	background-image: url(background.jpg);
+	background-size: cover;
+}
+
+div {
+	background-color: lightblue;
+	text-align: center;
+}
