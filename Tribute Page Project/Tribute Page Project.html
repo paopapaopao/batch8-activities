@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				background-color: wheat;
+			}
+			.flex-container {
+				display: flex;
+				flex-flow: row wrap-reverse;
+				justify-content: space-evenly;	/*horizontal alignment*/
+				align-items: center;			/*vertical alignment*/
+				align-content: center;
+			}
+			.img-sizeResponsive {
+				max-width: 500px;
+				height: auto;
+			}
+			#img-div, #tribute-info {
+				padding: 10px;
+				width: 45%;
+				height: 100%;
+				border-width: 4px;
+				border-color: black;
+				border-style: solid;
+			}
+			#image {
+				display: block;
+				margin: auto;
+			}
+		</style>
+		<title>Tribute Page Project</title>
+	</head>
+	<body>
+		<div id="main" class="flex-container">
+			<div id="tribute-info">
+				<h1>Lineage and childhood</h1>
+				<p>Alexander was born in Pella, the capital of the Kingdom of Macedon,[8] on the sixth day of the ancient Greek month of Hekatombaion, which probably corresponds to 20 July 356 BC, although the exact date is uncertain.[9] He was the son of the king of Macedon, Philip II, and his fourth wife, Olympias, the daughter of Neoptolemus I, king of Epirus.[10] Although Philip had seven or eight wives, Olympias was his principal wife for some time, likely because she gave birth to Alexander.[11]</p>
+				<p>Several legends surround Alexander's birth and childhood.[12] According to the ancient Greek biographer Plutarch, on the eve of the consummation of her marriage to Philip, Olympias dreamed that her womb was struck by a thunderbolt that caused a flame to spread "far and wide" before dying away. Sometime after the wedding, Philip is said to have seen himself, in a dream, securing his wife's womb with a seal engraved with a lion's image.[13] Plutarch offered a variety of interpretations of these dreams: that Olympias was pregnant before her marriage, indicated by the sealing of her womb; or that Alexander's father was Zeus. Ancient commentators were divided about whether the ambitious Olympias promulgated the story of Alexander's divine parentage, variously claiming that she had told Alexander, or that she dismissed the suggestion as impious.[13]</p>
+
+				<h1>Education</h1>
+				<p>When Alexander was 13, Philip began to search for a tutor, and considered such academics as Isocrates and Speusippus, the latter offering to resign from his stewardship of the Academy to take up the post. In the end, Philip chose Aristotle and provided the Temple of the Nymphs at Mieza as a classroom. In return for teaching Alexander, Philip agreed to rebuild Aristotle's hometown of Stageira, which Philip had razed, and to repopulate it by buying and freeing the ex-citizens who were slaves, or pardoning those who were in exile.[19]</p>
+
+				<a id="tribute-link" href="https://en.wikipedia.org/wiki/Alexander_the_Great" target="_blank">Click here for more information.</a>
+			</div>
+			<div id="img-div" style="text-align: center;">
+				<h1 id="title">Alexander the Great</h1>
+				<img id="image" class="img-sizeResponsive" src="image.jpg">
+				<figcaption id="img-caption">An ancient Roman floor mosaic (c. 100 BC), showing Alexander fighting king Darius III of Persia in the Battle of Issus</figcaption>
+			</div>
+		</div>
+	</body>
+</html>
