@@ -60,17 +60,16 @@ div.flex-container {
 	font-size: 16px;
 	transition: .5s;
 }
+/********** DI PA TAPOS /**********/
 .input-text input:focus ~ label,
 .input-text input:valid ~ label {
 	top: -40px;
 	color: lime;
 	font-size: 12px;
 }
+/**********************************/
 @media screen and (max-width: 600px) {
-	.msg textarea{
-		height: 80px;
-	}
-	.c1, {
-		width: 100%;
+	div.flex-container {
+		flex-direction: column;
 	}
 }
