@@ -1,0 +1,76 @@
+* {
+	/*The width and height properties (and min/max properties) includes content, padding and border*/
+	box-sizing: border-box;
+}
+body {
+	/*bg-color bg-image bg-position bg-size bg-repeat bg-origin bg-clip bg-attachment*/
+	background: rgb(104, 104, 161) url("airplane.jpg") center / cover no-repeat;
+	height: 100vh;
+}
+input[type=text],
+input[type=email],
+input[type=number],
+select,
+textarea,
+button {
+	width: 100%;
+}
+textarea {
+	height: 125px;
+	resize: none;
+}
+button {
+	background-color: rgb(54, 175, 100);
+	color: white;
+}
+form.flex-container {
+	flex-direction: column;
+	max-width: 50%;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 40px;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+div.flex-container {
+	padding: 10px;
+}
+.flex-container {
+	display: flex;
+	/*horizontal alignment*/
+	justify-content: space-evenly;
+	/*vertical alignment*/
+	align-items: center;
+	align-content: center;
+}
+.form-item {
+	padding: 10px;
+}
+.input-text input {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid white;
+	background: transparent;
+	color: white;
+	font-size: 16px;
+}
+.input-text label {
+	top: -20px;
+	position: relative;
+	color: white;
+	font-size: 16px;
+	transition: .5s;
+}
+.input-text input:focus ~ label,
+.input-text input:valid ~ label {
+	top: -40px;
+	color: lime;
+	font-size: 12px;
+}
+@media screen and (max-width: 600px) {
+	.msg textarea{
+		height: 80px;
+	}
+	.c1, {
+		width: 100%;
+	}
+}
