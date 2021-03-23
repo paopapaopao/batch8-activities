@@ -1,11 +1,21 @@
 * {
-	/*The width and height properties (and min/max properties) includes content, padding and border*/
+	/* The width and height properties (and min/max properties) includes content, padding and border */
 	box-sizing: border-box;
 }
 body {
-	/*bg-color bg-image bg-position bg-size bg-repeat bg-origin bg-clip bg-attachment*/
-	background: rgb(104, 104, 161) url("airplane.jpg") center / cover no-repeat;
-	height: 100vh;
+	/* bg-color bg-image bg-position bg-size bg-repeat !bg-origin !bg-clip bg-attachment */
+	background: rgb(104, 104, 161) url("airplane.jpg") center center / cover no-repeat fixed;
+}
+form.flex-container {
+	flex-direction: column;
+	max-width: 50%;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 40px;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+div.flex-container {
+	padding: 10px;
 }
 input[type=text],
 input[type=email],
@@ -23,29 +33,24 @@ button {
 	background-color: rgb(54, 175, 100);
 	color: white;
 }
-form.flex-container {
-	flex-direction: column;
-	max-width: 50%;
-	background-color: rgba(0, 0, 0, 0.8);
-	border-radius: 40px;
-	color: white;
-	font-family: Arial, sans-serif;
-}
-div.flex-container {
-	padding: 10px;
-}
 .flex-container {
 	display: flex;
-	/*horizontal alignment*/
+	/* horizontal alignment */
 	justify-content: space-evenly;
-	/*vertical alignment*/
+	/* vertical alignment */
 	align-items: center;
 	align-content: center;
 }
-.form-item {
+div.flex-container div div {
 	padding: 10px;
 }
-.input-text input {
+#title,
+#description {
+	text-align: center;
+}
+#name,
+#email,
+#number {
 	outline: none;
 	border: none;
 	border-bottom: 1px solid white;
@@ -53,23 +58,29 @@ div.flex-container {
 	color: white;
 	font-size: 16px;
 }
-.input-text label {
+@media screen and (max-width: 800px) {
+	div.flex-container {
+		/* change flex-direction when window width is <= 800 */
+		flex-direction: column;
+	}
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* Turn Off Number Input Spinners */
+	-webkit-appearance: none;
+}
+
+#name-label {
 	top: -20px;
 	position: relative;
 	color: white;
 	font-size: 16px;
+	/* t-property t-duration t-timing-function t-delay */
 	transition: .5s;
 }
-/********** DI PA TAPOS /**********/
-.input-text input:focus ~ label,
-.input-text input:valid ~ label {
+input:focus ~ #name-label,
+input:valid ~ #name-label {
 	top: -40px;
 	color: lime;
 	font-size: 12px;
-}
-/**********************************/
-@media screen and (max-width: 600px) {
-	div.flex-container {
-		flex-direction: column;
-	}
 }
