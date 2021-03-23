@@ -1,1 +1,0 @@
-# batch8-activities
