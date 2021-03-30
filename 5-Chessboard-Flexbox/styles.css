@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+
+	background: url(https://cdn.lifestyleasia.com/wp-content/uploads/sites/3/2020/10/30125302/AAAABcL2iWNIx4vi4cc0PT0PTlMcuXiOrJcg0UujHyeug-6AETl6AmELWTiRI0nzrJ4MyTI-mPSFzuSnLTH63iJyJxMIVp5M-1600x900.jpg) center / cover no-repeat fixed;
+
+	margin: 0;
+}
+.flexbox-container {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: min(100vw, 100vh);
+	height: min(100vw, 100vh);
+}
+.flexbox-item {
+	font-size: calc(min(100vw, 100vh) / 8 / 2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 12.5%;
+	height: 12.5%;
+}
+.flexbox-item:hover {
+	font-size: calc(min(100vw, 100vh) / 8 / 3 * 2);
+
+	box-shadow: 0 0 10px 5px cyan inset;
+}
+.white {
+	background-color: rgb(198, 196, 197);
+}
+.black {
+	background-color: rgb(67, 36, 34);
+}
