@@ -89,6 +89,7 @@ input:valid ~ #email-label {
 	top: -40px;
 	color: lime;
 }
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
