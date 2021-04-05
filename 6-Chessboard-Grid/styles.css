@@ -15,32 +15,152 @@ body {
 }
 .grid-container {
 	display: grid;
-	/* sets number and repeating size of columns */
-	grid-template-columns: repeat(8, 1fr);
-	/* sets number and repeating size of rows */
-	grid-template-rows: repeat(8, 1fr);
+	/* sets sizes of columns */
+	grid-template-columns: 1fr repeat(8, 2.25fr) 1fr;
+	/* sets sizes of rows */
+	grid-template-rows: 1fr repeat(8, 2.25fr) 1fr;
 
-	width: min(100vw, 100vh);
-	height: min(100vw, 100vh);
+	width: 100vmin;
+	height: 100vmin;
 }
 .grid-item {
-	/* 50% of grid-item size */
-	font-size: calc(min(100vw, 100vh) / 8 / 2);
 	/* horizontally and vertically centers content */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.grid-item:hover {
-	/* 66.7% of grid-item size */
-	font-size: calc(min(100vw, 100vh) / 8 / 3 * 2);
+.board-outer {
+	/* 5% of grid-container * 50% of board-outer */
+	font-size: calc(100vmin * 0.05 * 0.5);
+	color: white;
+
+	background-color: rgb(21, 21, 19);
+}
+.board-inner {
+	/* 11.25% of grid-container * 50% of board-inner */
+	font-size: calc(100vmin * 0.1125 * 0.5);
+}
+.board-inner:hover {
+	/* 11.25% of grid-container * 70% of board-inner */
+	font-size: calc(100vmin * 0.1125 * 0.7);
 
 	/* h-offset v-offset blur spread color inset */
-	box-shadow: 0 0 10px 5px cyan inset;
+	box-shadow: 0 0 10px 5px black inset;
 }
 .white {
 	background-color: rgb(198, 196, 197);
 }
 .black {
 	background-color: rgb(67, 36, 34);
+}
+/**************** Black King ****************/
+.e8.king:hover ~ .f8,
+.e8.king:hover ~ .e7,
+.e8.king:hover ~ .d8 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px green inset;
+}
+.e8.king:hover ~ .f7 {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** Black Bishop ****************/
+.b4.bishop:hover ~ .c5, /* previous sibling element */
+.b4.bishop:hover ~ .e7, /* previous sibling element */
+.b4.bishop:hover ~ .f8, /* previous sibling element */
+.b4.bishop:hover ~ .c3,
+.b4.bishop:hover ~ .e1 {
+	box-shadow: 0 0 10px 5px green inset;
+}
+.b4.bishop:hover ~ .d6, /* previous sibling element */
+.b4.bishop:hover ~ .d2,
+.b4.bishop:hover ~ .a3,
+.b4.bishop:hover ~ .a5 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** Black Knight ****************/
+.c6.knight:hover ~ .e5 {
+	box-shadow: 0 0 10px 5px red inset;
+}
+.c6.knight:hover ~ .d8, /* previous sibling element */
+.c6.knight:hover ~ .e7, /* previous sibling element */
+.c6.knight:hover ~ .b8 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px green inset;
+}
+.c6.knight:hover ~ .d4,
+.c6.knight:hover ~ .a5,
+.c6.knight:hover ~ .a7 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** Black Rook ****************/
+.h4.rook:hover ~ .h5, /* previous sibling element */
+.h4.rook:hover ~ .h6, /* previous sibling element */
+.h4.rook:hover ~ .h8, /* previous sibling element */
+.h4.rook:hover ~ .h2,
+.h4.rook:hover ~ .h1,
+.h4.rook:hover ~ .g4, /* previous sibling element */
+.h4.rook:hover ~ .c4 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px green inset;
+}
+.h4.rook:hover ~ .h7, /* previous sibling element */
+.h4.rook:hover ~ .h3,
+.h4.rook:hover ~ .f4, /* previous sibling element */
+.h4.rook:hover ~ .e4, /* previous sibling element */
+.h4.rook:hover ~ .d4 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** Black Pawn-1 ****************/
+.d7.pawn:hover ~ .d6,
+.d7.pawn:hover ~ .d5 {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** Black Pawn-2 ****************/
+.f5.pawn:hover ~ .f4 {
+	box-shadow: 0 0 10px 5px green inset;
+}
+/**************** White King ****************/
+.e3.king:hover ~ .f3,
+.e3.king:hover ~ .f2,
+.e3.king:hover ~ .e2,
+.e3.king:hover ~ .d3 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px green inset;
+}
+.e3.king:hover ~ .e4, /* previous sibling element */
+.e3.king:hover ~ .f4, /* previous sibling element */
+.e3.king:hover ~ .d2,
+.e3.king:hover ~ .d4 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** White Queen ****************/
+.a4.queen:hover ~ .c6, /* previous sibling element */
+.a4.queen:hover ~ .b4 {
+	box-shadow: 0 0 10px 5px red inset;
+}
+.a4.queen:hover ~ .a6, /* previous sibling element */
+.a4.queen:hover ~ .a8, /* previous sibling element */
+.a4.queen:hover ~ .b5, /* previous sibling element */
+.a4.queen:hover ~ .b3,
+.a4.queen:hover ~ .c2,
+.a4.queen:hover ~ .d1,
+.a4.queen:hover ~ .a2,
+.a4.queen:hover ~ .a1 {
+	box-shadow: 0 0 10px 5px green inset;
+}
+.a4.queen:hover ~ .a5, /* previous sibling element */
+.a4.queen:hover ~ .a7, /* previous sibling element */
+.a4.queen:hover ~ .a3 {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** White Knight ****************/
+.g5.knight:hover ~ .f3 {
+	box-shadow: 0 0 10px 5px green inset;
+}
+.g5.knight:hover ~ .h7, /* previous sibling element */
+.g5.knight:hover ~ .h3,
+.g5.knight:hover ~ .e4,
+.g5.knight:hover ~ .e6, /* previous sibling element */
+.g5.knight:hover ~ .f7 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px yellow inset;
+}
+/**************** White Pawn ****************/
+.e5.pawn:hover ~ .e6 /* previous sibling element */ {
+	box-shadow: 0 0 10px 5px yellow inset;
 }
