@@ -1,0 +1,108 @@
+* {
+	/* The width and height properties (and min/max properties) includes content, padding and border */
+	box-sizing: border-box;
+}
+body {
+	width: 700px;
+
+	/* bg-image bg-position / bg-size bg-repeat bg-attachment */
+	background: url(airplane.jpg) center / cover no-repeat fixed;
+
+	/* margin auto on left & right horizontally centers block elements */
+	margin: 12px auto;
+}
+/* body-width (700px) + scrollbar-width (17px) */
+@media screen and (max-width: 717px) {
+	body {
+		/* change width if viewport width is <= 717px */
+		width: 100%;
+	}
+}
+.main {
+	font-family: Arial, sans-serif;
+	color: white;
+
+	padding: 12px;
+	background-color: rgba(0, 0, 0, 0.8);
+
+	border-radius: 40px;
+}
+#title,
+#description {
+	text-align: center;
+}
+form {
+	display: flex;
+}
+@media screen and (max-width: 500px) {
+	form {
+		/* change flex-direction if viewport width is <= 500 */
+		flex-direction: column;
+	}
+}
+.input-text,
+.input-email,
+.input-number,
+.input-select,
+.input-radio,
+.input-checkbox,
+.input-textarea,
+.btn-submit {
+	padding: 12px;
+}
+#name,
+#email,
+#number,
+select,
+textarea,
+button {
+	width: 100%;
+}
+#name,
+#email,
+#number {
+	font-size: 16px;
+	color: white;
+
+	background: transparent;
+
+	border: none;
+	border-bottom: solid 1px white;
+
+	outline: none;
+}
+#name-label,
+#email-label,
+#number-label {
+	position: relative;
+	top: 0;
+	/* t-property t-duration t-timing-function t-delay */
+	transition: top 0.5s;
+}
+input:focus ~ #name-label,
+input:focus ~ #email-label,
+input:focus ~ #number-label {
+	top: -40px;
+}
+input:valid ~ #name-label,
+input:valid ~ #email-label {
+	top: -40px;
+	color: lime;
+}
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+select,
+textarea,
+button {
+	font-size: 16px
+}
+textarea {
+	height: 120px;
+	resize: none;
+}
+button {
+	color: white;
+
+	background-color: rgb(54, 175, 100);
+}
