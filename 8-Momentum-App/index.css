@@ -1,0 +1,241 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	color: white;
+	font-family: Arial, sans-serif;
+
+	background: url(background.jpg) center / cover no-repeat fixed;
+
+	margin: 0;
+}
+
+.modalSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalDiv {
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	width: 50%;
+	height: 128px;
+	background-color: white;
+}
+
+#nameInput {
+	font-size: 32px;
+	width: 240px;
+	height: 40px;
+}
+
+#top {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	height: 292px;
+}
+
+#dateSection {
+	font-size: 40px;
+	line-height: 48px;
+
+	width: 100%;
+	height: 48px;
+}
+
+#timeSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 148px;
+
+	font-size: 160px;
+	line-height: 148px;
+}
+
+#timeSection:hover #timeButton {
+	display: block;
+}
+
+#timeDiv {
+	font-size: 160px;
+	line-height: 148px;
+
+	height: 148px;
+}
+
+#timeButton {
+	display: none;
+}
+
+#greetingSection {
+	font-size: 64px;
+	line-height: 96px;
+
+	width: 100%;
+	height: 96px;
+}
+
+#center {
+	width: 100%;
+	height: 292px;
+}
+
+#focusSection {
+	font-size: 64px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 292px;
+}
+
+#focusInput {
+	font-size: 48px;
+	color: white;
+	caret-color: white;
+	width: 50%;
+	height: 64px;
+
+	background: transparent;
+
+	border: none;
+	border-bottom: 4px solid white;
+
+	outline: none;
+}
+
+#bottom {
+	display: flex;
+	flex-direction: row;
+
+	width: 100%;
+	height: 73px;
+}
+
+#quoteSection {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	height: 73px;
+}
+
+#quoteDiv {
+	font-size: 16px;
+	line-height: 24px;
+	font-style: italic;
+
+	width: 100%;
+	height: 48px;
+}
+
+#quoteButtonsDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 25px;
+}
+
+#quoteModal {
+	display: none;
+}
+
+/*******************************************/
+
+#todoDiv {
+	font-size: 32px;
+	display: none;
+	flex-direction: column;
+	overflow: auto;
+
+	width: 400px;
+	height: 120px;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+#todoDiv > div > label {
+	padding-left: 15px;
+}
+
+#todoDiv > div > button {
+	float: right;
+}
+
+/*****************************************/
+
+@media screen and (max-width: 768px) {
+	.modalDiv {
+		font-size: 18px;
+	}
+	#nameInput,
+	#todoDiv {
+		font-size: 24px;
+	}
+	#dateSection {
+		font-size: 30px;
+	}
+	#timeDiv {
+		font-size: 120px;
+	}
+	#greetingSection,
+	#focusSection {
+		font-size: 48px;
+	}
+	#focusInput {
+		font-size: 36px;
+	}
+	#quoteDiv {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.modalDiv {
+		font-size: 12px;
+	}
+	#nameInput,
+	#todoDiv {
+		font-size: 16px;
+	}
+	#dateSection {
+		font-size: 20px;
+	}
+	#timeDiv {
+		font-size: 80px;
+	}
+	#greetingSection,
+	#focusSection {
+		font-size: 32px;
+	}
+	#focusInput {
+		font-size: 24px;
+	}
+	#quoteDiv {
+		font-size: 8px;
+	}
+}

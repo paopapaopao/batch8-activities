@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<script src="index.js" defer="true"></script>
+		<title>Momentum App</title>
+	</head>
+	<body>
+		<section id="top">
+			<section id="nameModal" class="modalSection">
+				<div class="modalDiv">
+					<label>What's your name?</label>
+					<input type="text" id="nameInput">
+				</div>
+			</section>
+			<section id="dateSection"></section>
+			<section id="timeSection">
+				<div id="timeDiv"></div>
+				<button id="timeButton">12-hr Clock</button>
+			</section>
+			<section id="greetingSection"></section>
+		</section>
+		<section id="center">
+			<section id="focusSection">
+				<label for="" id="focusLabel">What is your main focus for today?</label>
+				<input type="text" id="focusInput">
+			</section>
+		</section>
+		<section id="bottom">
+			<section id="quoteSection">
+				<div id="quoteDiv"></div>
+				<div id="quoteButtonsDiv">
+					<button id="quoteAddButton">Add Quote</button>
+					<button id="quoteRandomButton">Random Quote</button>
+				</div>
+			</section>
+			<section id="quoteModal" class="modalSection">
+				<div class="modalDiv">
+					<label>Enter quote:</label>
+					<input type="text" id="quoteInput">
+					<label>From:</label>
+					<input type="text" id="quoteFromInput">
+					<button id="addButton">Add</button>
+					<button id="exitButton">Exit</button>
+				</div>
+			</section>
+			<section id="todoSection">
+				<button id="todoButton">Todo</button>
+				<div id="todoDiv">
+					<input type="text" id="todoInput" placeholder="New Todo">
+				</div>
+			</section>
+		</section>
+	</body>
+</html>
