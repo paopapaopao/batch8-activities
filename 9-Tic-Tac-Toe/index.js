@@ -94,8 +94,9 @@ function gameOver(result) {
 	//highlight the winning combination(s)
 	highlightWinningCombinations("green");
 
-	//enable the previous button
+	//enable the previous button, disable the next button
 	previous.disabled = false;
+	next.disabled = true;
 	//show the game-over buttons
 	previous.style.visibility = "visible";
 	next.style.visibility = "visible";
