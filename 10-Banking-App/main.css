@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+
+	width: 100vw;
+	height: 100vh;
+
+	margin: 0;
+}
+
+#side-nav {
+	font-size: 24px;
+	display: flex;
+	flex-direction: column;
+
+	flex: 1 1 200px;
+
+	background-color: black;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+
+	padding: 24px;
+}
+
+a:hover {
+	background-color: gray;
+}
+
+#user-info {
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+
+	flex: 1 1 866px;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+tr:hover:nth-child(odd) {
+	background-color: lightblue;
+}
+
+tr:hover:nth-child(even) {
+	background-color: lightblue;
+}
+
+th {
+	font-size: 20px;
+
+	padding: 8px 16px;
+}
+
+td {
+	text-align: center;
+
+	padding: 4px 16px;
+}
+
+tr:nth-child(odd) {
+	background-color: lightgray;
+}
+
+#actions {
+	font-size: 24px;
+	color: white;
+
+	flex: 1 1 300px;
+
+	background-color: black;
+}
+
+#create-user-section {
+	display: block;
+}
+
+#deposit-section,
+#withdraw-section,
+#send-section {
+	display: none;
+}
+
+.input-unit {
+	display: flex;
+	flex-direction: column;
+
+	margin: 32px;
+}
+
+input {
+	font-size: 16px;
+
+	height: 32px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+button {
+	height: 24px;
+}
