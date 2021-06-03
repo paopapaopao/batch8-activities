@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="admin.css">
+		<script src="index.js" defer="true"></script>
+		<script src="admin.js" deefe="true"></script>
+		<title>Admin Page</title>
+	</head>
+	<body onload="loadUsersEL()">
+		<!-- Forms -->
+		<section id="forms">
+			<!-- Create User -->
+			<section id="create-user-section">
+				<div class="input-text-field-unit">
+					<label for="">Email (required)</label>
+					<input type="email" id="create-user-email">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="">Password (required)</label>
+					<input type="text" id="create-user-password">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="">Name (required)</label>
+					<input type="text" id="create-user-name">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="">Account Balance (optional)</label>
+					<input type="number" id="create-user-account-balance" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<div class="input-text-field-unit">
+					<button onclick="createUserEL()">Create User</button>
+				</div>
+			</section>
+
+			<!-- Deposit -->
+			<section id="deposit-section">
+				<div class="input-text-field-unit">
+					<label for="deposit-to">Deposit To</label>
+					<input type="email" id="deposit-to">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="deposit-amount">Deposit Amount</label>
+					<input type="number" id="deposit-amount" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<div class="input-text-field-unit">
+					<button onclick="depositEL()">Deposit</button>
+				</div>
+			</section>
+
+			<!-- Withdraw -->
+			<section id="withdraw-section">
+				<div class="input-text-field-unit">
+					<label for="withdraw-from">Withdraw From</label>
+					<input type="email" id="withdraw-from">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="withdraw-amount">Withdraw Amount</label>
+					<input type="number" id="withdraw-amount" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<div class="input-text-field-unit">
+					<button onclick="withdrawEL()">Withdraw</button>
+				</div>
+			</section>
+
+			<!-- Send -->
+			<section id="send-section">
+				<div class="input-text-field-unit">
+					<label for="send-from">Send From</label>
+					<input type="email" id="send-from">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="send-to">Send To</label>
+					<input type="email" id="send-to">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="send-amount">Send Amount</label>
+					<input type="number" id="send-amount" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<div class="input-text-field-unit">
+					<button onclick="sendEL()">Send</button>
+				</div>
+			</section>
+		</section>
+
+		<!-- Top Navigation Bar -->
+		<nav id="top-nav-bar">
+			<a onclick="displayCreateUserSectionEL()">Create User</a>
+			<div class="dropdown">
+				<a class="dropbtn" onclick="displayDropdown()">Transactions
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<div class="dropdown-content" id="myDropdown">
+					<a onclick="displayDepositSectionEL()">Deposit</a>
+					<a onclick="displayWithdrawSectionEL()">Withdraw</a>
+					<a onclick="displaySendSectionEL()">Send</a>
+				</div>
+			</div>
+			<a onclick="logOutEL()">Log Out</a>
+		</nav>
+
+		<!-- Users Information -->
+		<section id="users-info">
+			<table id="table">
+				<tr>
+					<th>#</th>
+					<th>Email</th>
+					<th>Password</th>
+					<th>Name</th>
+					<th>Account Balance</th>
+					<th>Expense Items</th>
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>

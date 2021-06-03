@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="user.css">
+		<script src="index.js" defer="true"></script>
+		<script src="user.js" defer="true"></script>
+		<title>User Page</title>
+	</head>
+	<body onload="loadUsersEL()">
+		<!-- Top Navigation Bar -->
+		<nav id="top-nav" class="nav-bar">
+			<div class="dropdown">
+				<a class="dropbtn" onclick="displayDropdown()">Transactions
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<div class="dropdown-content" id="myDropdown">
+					<a onclick="displayDepositSectionEL()">Deposit</a>
+					<a onclick="displayWithdrawSectionEL()">Withdraw</a>
+					<a onclick="displaySendSectionEL()">Send</a>
+				</div>
+			</div>
+			<a onclick="displayAddExpenseItemSection()">Add Expense Item</a>
+			<a onclick="logOutEL()">Log Out</a>
+		</nav>
+
+		<!-- User Info -->
+		<section id="user-info">
+			<div>
+				<img src="blank-profile-picture.png" alt="profile picture">
+			</div>
+			<div>
+				<span id="email-address">Email Address: </span><br>
+				<span id="name">Name: </span><br>
+				<span id="account-balance">Account Balance: </span><br>
+			</div>
+		</section>
+
+		<!-- User Expense Items -->
+		<section id="expense-items">
+			<h1>My Expense Items</h1>
+			<table id="table">
+				<tr>
+					<th>Name</th>
+					<th>Cost</th>
+					<th>Delete</th>
+				</tr>
+			</table>
+		</section>
+
+		<!-- Deposit -->
+		<section class="modal" id="deposit-section">
+			<section class="modal-content">
+				<span class="close" onclick="closeDepositSectionEL()">×</span>
+				<h1>Deposit</h1>
+				<div class="input-text-field-unit">
+					<label for="deposit-amount">Amount</label>
+					<input type="number" id="deposit-amount" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<button onclick="depositEL()">Deposit</button>
+			</section>
+		</section>
+
+		<!-- Withdraw -->
+		<section class="modal" id="withdraw-section">
+			<section class="modal-content">
+				<span class="close" onclick="closeWithdrawSectionEL()">×</span>
+				<h1>Withdraw</h1>
+				<div class="input-text-field-unit">
+					<label for="withdraw-amount">Amount</label>
+					<input type="number" id="withdraw-amount" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<button onclick="withdrawEL()">Withdraw</button>
+			</section>
+		</section>
+
+		<!-- Send -->
+		<section class="modal" id="send-section">
+			<section class="modal-content">
+				<span class="close" onclick="closeSendSectionEL()">×</span>
+				<h1>Send</h1>
+				<div class="input-text-field-unit">
+					<label for="send-to">Recepient</label>
+					<input type="email" id="send-to">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="send-amount">Amount</label>
+					<input type="number" id="send-amount" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<button onclick="sendEL()">Send</button>
+			</section>
+		</section>
+
+		<!-- Add Expense Item -->
+		<section class="modal" id="add-expense-item-section">
+			<section class="modal-content">
+				<span class="close" onclick="closeAddExpenseItemSectionEL()">×</span>
+				<h1>Add Expense Item</h1>
+				<div class="input-text-field-unit">
+					<label for="add-name">Name</label>
+					<input type="text" id="add-name">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="add-cost">Cost</label>
+					<input type="number" id="add-cost" onkeypress="numberInputKeypressEL(event)">
+				</div>
+				<button onclick="addEL()">Add</button>
+			</section>
+		</section>
+	</body>
+</html>

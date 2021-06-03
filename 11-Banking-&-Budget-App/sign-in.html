@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="sign-in.css">
+		<script src="index.js" defer="true"></script>
+		<script src="sign-in.js" defer="true"></script>
+		<title>Sign In Page</title>
+	</head>
+	<body onload="loadUsersEL()">
+		<!-- Sign In -->
+		<section class="flex-container" id="sign-in">
+			<div class="input-radio-button-group">
+				<div class="input-radio-button-unit">
+					<input type="radio" id="user" name="type" checked onclick="showCreateAccountButtonEL()">
+					<label for="user">User</label>
+				</div>
+				<div class="input-radio-button-unit">
+					<input type="radio" id="admin" name="type" onclick="hideCreateAccountButtonEL()">
+					<label for="admin">Admin</label>
+				</div>
+			</div>
+			<div class="input-text-field-unit">
+				<label for="username" id="identifier">Email Address</label>
+				<input type="email" id="username">
+			</div>
+			<div class="input-text-field-unit">
+				<label for="password">Password</label>
+				<input type="password" id="password">
+			</div>
+			<button onclick="signInEL()">Sign In</button>
+			<button id="create-account" onclick="displaySignUpSectionEL()">Create an account</button>
+		</section>
+
+		<!-- Sign Up -->
+		<section class="flex-container modal" id="sign-up">
+			<div class="modal-content">
+				<span class="close" onclick="closeSignUpSectionEL()">×</span>
+				<h1>Sign Up</h1>
+				<div class="input-text-field-unit">
+					<label for="sign-up-email">Email Address (required)</label>
+					<input type="email" id="sign-up-email">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="sign-up-password">Password (required)</label>
+					<input type="password" id="sign-up-password">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="sign-up-name">Name (required)</label>
+					<input type="text" id="sign-up-name">
+				</div>
+				<div class="input-text-field-unit">
+					<label for="sign-up-account-balance">Initial Account Balance (optional)</label>
+					<input type="number" id="sign-up-account-balance">
+				</div>
+				<div>
+					<button onclick="signUpEL()">Sign Up</button>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
