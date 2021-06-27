@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+		<script src="constants.js" defer="true"></script>
+		<script src="index.js" defer="true"></script>
+		<title>API App</title>
+	</head>
+	<body>
+		<!-- Navigation Bar -->
+		<nav class="navbar">
+			<!-- App Logo / App Name -->
+			<a href="#" onclick="anchorEL(this)"><i class="fab fa-nutritionix"></i> APP-NAME</a>
+			
+			<!-- Links -->
+			<ul>
+				<li><a href="#" class="active" onclick="anchorEL(this)">HOME</a></li>
+				<li><a href="#" onclick="anchorEL(this)">SEARCH</a></li>
+				<li><a href="#recipes" onclick="anchorEL(this)">RECIPES</a></li>
+			</ul>
+		</nav>
+
+		<!-- Search Section -->
+		<section class="search">
+			<div class="search-unit">
+				<label for="ingredients">Search for recipes using ingredients you have!</label>
+				<div>
+					<input type="text" id="ingredients" placeholder="Search..." onkeypress="searchKeypressEL(event)">
+					<button onclick="searchClickEL()"><i class="fas fa-search"></i></button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Recipes -->
+		<section class="recipes" id="recipes">
+		</section>
+	</body>
+</html>
