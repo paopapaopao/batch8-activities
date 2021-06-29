@@ -19,8 +19,10 @@ end
 
 array1 = nil
 array2 = []
-array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+array3 = [0]
+array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
 
 puts count_of_positives_and_sum_of_negatives(array1)
 puts count_of_positives_and_sum_of_negatives(array2)
 puts count_of_positives_and_sum_of_negatives(array3)
+puts count_of_positives_and_sum_of_negatives(array4)
